@@ -1,0 +1,128 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #bdbdbd;
+    color: #1e1e1e;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    font-family: Arial, Helvetica, sans-serif;
+}
+header {
+    width: 95%;
+    max-width: 788px;
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 15px;
+}
+
+.share-button {
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+    background-color: rgb(240, 240, 240);
+}
+.share-button:hover {
+    background-color: rgb(163, 163, 163);
+    transition: ease-in-out 0.4s;
+}
+.share-button img {
+    margin: 10px;
+    width: 30px;
+    height: 30px;
+}
+.nama {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: -30px;
+}
+.nrp {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.container {
+    width: 91%;
+    max-width: 680px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.image {
+    border-radius: 50%;
+    width: 200px;
+}
+.sosmed {
+    margin-bottom: 45px;
+    display: flex;
+    transition: ease-in-out 0.2s;
+}
+.sosmed a {
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    text-decoration: none;
+    color: #000;
+    box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.05);
+    margin: 0 30px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    transition: ease-in-out 0.2s;
+}
+.sosmed a .link-icon {
+    width: 40px;
+    height: 40px;
+}
+.sosmed a:hover {
+    transform: scale(1.1);
+}
+
+.tile {
+    font-weight: bold;
+    text-decoration: none;
+    color: #1e1e1e;
+    width: 100%;
+    height: 50px;
+    background-color: #fff;
+    box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.05);
+    margin: 7px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    transition: ease-in-out 0.2s;
+}
+.tile:hover {
+    transform: scale(1.1);
+}
+.title-icon-button:hover {
+    margin: 4px;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: rgb(225, 225, 225);
+    transition: ease-in-out 0.2s;
+}
+.title-icon-button img {
+    margin: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+.image-link {
+    margin: 4px;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+}
+.linktree {
+    display: flex;
+    justify-items: center;
+    flex-direction: column;
+    margin-top: 100px;
+    width: 100px;
+}
