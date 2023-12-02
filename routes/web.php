@@ -59,8 +59,17 @@ Route::get('/formulir', 'App\Http\Controllers\DosenController@formulir');
 Route::post('/formulir/proses', 'App\Http\Controllers\DosenController@proses');
 
 Route::get('/pegawai','App\Http\Controllers\PegawaiController@index');
+
+//untuk menambah pengawai
 Route::get('/pegawai/tambah','App\Http\Controllers\PegawaiController@tambah');
+
+//setelah ditambah, agar bisa disubmit, pakai route yang dibawah
 Route::post('/pegawai/store','App\Http\Controllers\PegawaiController@store');
+
+//edit database
 Route::get('/pegawai/edit/{id}','App\Http\Controllers\PegawaiController@edit');
+//update database
 Route::post('/pegawai/update','App\Http\Controllers\PegawaiController@update');
+
+//detele database
 Route::get('/pegawai/hapus/{id}','App\Http\Controllers\PegawaiController@hapus');
