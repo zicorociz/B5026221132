@@ -61,22 +61,22 @@
     <section id="about" class="about section-padding">
       <div class="container">
         <div class="row">
-          <div class="col-lg-4 col-md-12 col-12">
-            <div class="about-img">
-              <img src="ets/profil.png" alt="Zikrul Khalis" class="img-fluid" />
+            <div class="col-lg-4 col-md-12 col-12">
+              <div class="about-img">
+                <img src="ets/profil.png" alt="Zikrul Khalis" class="img-fluid" />
+              </div>
+            </div>
+            <div class="col-lg-8 col-md-12 col-12 ps-lg-5 mt-md-5">
+              <div class="about-text">
+                <h2>About Me</h2>
+                <p>
+                  I am Zikrul Khalis, a student majoring in Information Systems at Sepuluh Nopember Institute of Technology (ITS) Surabaya, who has experience in various design projects, including posters and UI/UX. I work efficiently within
+                  the theme and understand user needs. I'm excited for new design challenges and creating visually stunning designs.
+                </p>
+                <a href="https://drive.google.com/file/d/17J1q5T3XDAbjRfyrWkBf-DMZmq_-EAWA/view?usp=share_link" target="_blank" class="btn">Download CV</a>
+              </div>
             </div>
           </div>
-          <div class="col-lg-8 col-md-12 col-12 ps-lg-5 mt-md-5">
-            <div class="about-text">
-              <h2>About Me</h2>
-              <p>
-                I am Zikrul Khalis, a student majoring in Information Systems at Sepuluh Nopember Institute of Technology (ITS) Surabaya, who has experience in various design projects, including posters and UI/UX. I work efficiently within
-                the theme and understand user needs. I'm excited for new design challenges and creating visually stunning designs.
-              </p>
-              <a href="https://drive.google.com/file/d/17J1q5T3XDAbjRfyrWkBf-DMZmq_-EAWA/view?usp=share_link" target="_blank" class="btn">Download CV</a>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
     <!-- Akhir About -->

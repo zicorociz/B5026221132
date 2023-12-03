@@ -1,7 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
+    {{-- Link Boostrap --}}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css" integrity="sha384-nU14brUcp6StFntEOOEBvcJm4huWjB0OcIeQ3fltAfSmuZFrkAif0T+UtNGlKKQv" crossorigin="anonymous" />
+
 	<title>Tutorial Membuat CRUD Pada Laravel - www.malasngoding.com</title>
+    <style>
+
+        form {
+            display: grid;
+            grid-template-columns: max-content 1fr;
+            gap: 10px;
+            max-width: 400px;
+
+        }
+
+        form label {
+            text-align: right;
+            padding-right: 10px;
+        }
+
+        form input,
+        form textarea {
+            box-sizing: border-box;
+            width: 100%;
+        }
+
+        form input[type="submit"] {
+            grid-column: span 2; /* Make the submit button span two columns for full width */
+        }
+
+        .row .col-4{
+            width: 200px; /* Lebar persegi panjang */
+            height: auto; /* Tinggi persegi panjang */
+            border: 2px solid #3498db
+        }
+    </style>
 </head>
 <body>
 
@@ -13,18 +47,22 @@
 	<br/>
 	<br/>
 
-	@foreach($pegawai as $p)
-	<form action="/pegawai/update" method="post">
-		{{ csrf_field() }}
-		<input type="hidden" name="id" value="{{ $p->pegawai_id }}"> <br/>
-		Nama <input type="text" required="required" name="nama" value="{{ $p->pegawai_nama }}"> <br/>
-		Jabatan <input type="text" required="required" name="jabatan" value="{{ $p->pegawai_jabatan }}"> <br/>
-		Umur <input type="number" required="required" name="umur" value="{{ $p->pegawai_umur }}"> <br/>
-		Alamat <textarea required="required" name="alamat">{{ $p->pegawai_alamat }}</textarea> <br/>
-		<input type="submit" value="Simpan Data">
-	</form>
-	@endforeach
+    <div class="container">
+        <div class="row">
+            <div class="col-4" ></div>
+            <div class="col-6">@foreach($pegawai as $p)
+                <form action="/pegawai/update" method="post">
+                    {{ csrf_field() }}
+                    <input type="hidden" name="id" value="{{ $p->pegawai_id }}"> <br/>
 
-
+                    Nama <input type="text" required="required" name="nama" value="{{ $p->pegawai_nama }}"> <br/>
+                    Jabatan <input type="text" required="required" name="jabatan" value="{{ $p->pegawai_jabatan }}"> <br/>
+                    Umur <input type="number" required="required" name="umur" value="{{ $p->pegawai_umur }}"> <br/>
+                    Alamat <textarea required="required" name="alamat">{{ $p->pegawai_alamat }}</textarea> <br/>
+                    <input type="submit" value="OK">
+                </form>
+                @endforeach</div>
+        </div>
+    </div>
 </body>
 </html>
