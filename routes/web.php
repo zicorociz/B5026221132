@@ -77,5 +77,7 @@ Route::get('/pegawai/hapus/{id}','App\Http\Controllers\PegawaiController@hapus')
 //readonly
 Route::get('/pegawai/view/{id}','App\Http\Controllers\PegawaiController@view');
 
-//Route untuk menakses method index
-Route::get('/pegawai','PegawaiController@index');
+
+// nilai kuliah
+Route::get('kuliah','App\Http\Controllers\KuliahController@nilai');
+

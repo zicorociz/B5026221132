@@ -14,7 +14,7 @@
 	<br/>
 	<br/>
 
-	<table class="border border-2 border-dark">
+	<table class="table table-striped">
 		<tr>
 			<th>Nama</th>
 			<th>Jabatan</th>
@@ -23,21 +23,21 @@
 			<th>Opsi</th>
 		</tr>
 		@foreach($pegawai as $p)
-<tr class="border border-2 border-dark">
-	<td class="border border-2 border-dark ">{{ $p->pegawai_nama }}</td>
-	<td class="border border-2 border-dark text-center p-2">{{ $p->pegawai_jabatan }}</td>
-	<td class="border border-2 border-dark text-center p-2">{{ $p->pegawai_umur }}</td>
-	<td class="border border-2 border-dark ">{{ $p->pegawai_alamat }}</td>
-	<td class="border border-2 border-dark ">
-		<div class="btn-group gap-2" role="group" aria-label="Basic example">
+<tr >
+	<td >{{ $p->pegawai_nama }}</td>
+	<td >{{ $p->pegawai_jabatan }}</td>
+	<td >{{ $p->pegawai_umur }}</td>
+	<td >{{ $p->pegawai_alamat }}</td>
+	<td >
             <a href="/pegawai/edit/{{ $p->pegawai_id }}" class="btn btn-warning">Edit</a>
             <a href="/pegawai/view/{{ $p->pegawai_id }}" class="btn btn-primary">View</a>
             <a href="/pegawai/hapus/{{ $p->pegawai_id }}" class="btn btn-danger">Hapus</a>
-        </div>
 	</td>
 </tr>
 @endforeach
 	</table>
+<br/>
+	{{ $pegawai->links() }}
 
 
 </body>
