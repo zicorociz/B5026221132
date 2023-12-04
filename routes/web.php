@@ -73,3 +73,6 @@ Route::post('/pegawai/update','App\Http\Controllers\PegawaiController@update');
 
 //detele database
 Route::get('/pegawai/hapus/{id}','App\Http\Controllers\PegawaiController@hapus');
+
+//readonly
+Route::get('/pegawai/view/{id}','App\Http\Controllers\PegawaiController@view');

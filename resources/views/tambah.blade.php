@@ -25,11 +25,11 @@
         }
 
         form input[type="submit"] {
-            grid-column: span 2; /* Make the submit button span two columns for full width */
+            grid-column: span 2;
         }
         .row .col-4{
-            width: 200px; /* Lebar persegi panjang */
-            height: auto; /* Tinggi persegi panjang */
+            width: 200px;
+            height: auto;
             border: 2px solid #3498db
         }
     </style>

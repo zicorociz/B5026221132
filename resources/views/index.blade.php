@@ -29,8 +29,11 @@
 	<td class="border border-2 border-dark text-center p-2">{{ $p->pegawai_umur }}</td>
 	<td class="border border-2 border-dark ">{{ $p->pegawai_alamat }}</td>
 	<td class="border border-2 border-dark ">
-		<a href="/pegawai/edit/{{ $p->pegawai_id }}" class="btn btn-warning mb-2">Edit</a>
-		<a href="/pegawai/hapus/{{ $p->pegawai_id }}" class="btn btn-danger">Hapus</a>
+		<div class="btn-group gap-2" role="group" aria-label="Basic example">
+            <a href="/pegawai/edit/{{ $p->pegawai_id }}" class="btn btn-warning">Edit</a>
+            <a href="/pegawai/view/{{ $p->pegawai_id }}" class="btn btn-primary">View</a>
+            <a href="/pegawai/hapus/{{ $p->pegawai_id }}" class="btn btn-danger">Hapus</a>
+        </div>
 	</td>
 </tr>
 @endforeach
