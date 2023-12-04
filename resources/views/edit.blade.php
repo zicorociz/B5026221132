@@ -42,7 +42,7 @@
 	<h2><a href="https://www.malasngoding.com">www.malasngoding.com</a></h2>
 	<h3>Edit Pegawai</h3>
 
-	<a href="/pegawai"> Kembali</a>
+	<a href="/pegawai" class="btn btn-primary"> <- Kembali</a>
 
 	<br/>
 	<br/>
@@ -55,11 +55,11 @@
                     {{ csrf_field() }}
                     <input type="hidden" name="id" value="{{ $p->pegawai_id }}"> <br/>
 
-                    Nama <input type="text" required="required" name="nama" value="{{ $p->pegawai_nama }}"> <br/>
-                    Jabatan <input type="text" required="required" name="jabatan" value="{{ $p->pegawai_jabatan }}"> <br/>
-                    Umur <input type="number" required="required" name="umur" value="{{ $p->pegawai_umur }}"> <br/>
-                    Alamat <textarea required="required" name="alamat">{{ $p->pegawai_alamat }}</textarea> <br/>
-                    <input type="submit" value="OK">
+                    Nama <input class="border border-primary" type="text" required="required" name="nama" value="{{ $p->pegawai_nama }}"> <br/>
+                    Jabatan <input class="border border-primary" type="text" required="required" name="jabatan" value="{{ $p->pegawai_jabatan }}"> <br/>
+                    Umur <input class="border border-primary" type="number" required="required" name="umur" value="{{ $p->pegawai_umur }}"> <br/>
+                    Alamat <textarea class="border border-primary" required="required" name="alamat">{{ $p->pegawai_alamat }}</textarea> <br/>
+                    <input class="btn btn-warning" type="submit" value="OK">
                 </form>
                 @endforeach</div>
         </div>
