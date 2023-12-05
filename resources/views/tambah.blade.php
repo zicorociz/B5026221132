@@ -1,62 +1,39 @@
-<!DOCTYPE html>
-<html>
-<head>
-    {{-- Link Boostrap --}}
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css" integrity="sha384-nU14brUcp6StFntEOOEBvcJm4huWjB0OcIeQ3fltAfSmuZFrkAif0T+UtNGlKKQv" crossorigin="anonymous" />
-	<title>Tutorial Membuat CRUD Pada Laravel - www.malasngoding.com</title>
-    <style>
-        form {
-            display: grid;
-            grid-template-columns: max-content 1fr;
-            gap: 10px;
-            max-width: 400px;
-            margin: auto;
-        }
+@extends('master')
 
-        form label {
-            text-align: right;
-            padding-right: 10px;
-        }
+@section('title', 'Data Pegawai')
 
-        form input,
-        form textarea {
-            box-sizing: border-box;
-            width: 100%;
-        }
 
-        form input[type="submit"] {
-            grid-column: span 2;
-        }
-        .row .col-4{
-            width: 200px;
-            height: auto;
-            border: 2px solid #3498db
-        }
-    </style>
-</head>
-<body>
+@section('konten')
 
-	<h2><a href="https://www.malasngoding.com">www.malasngoding.com</a></h2>
-	<h3>Data Pegawai</h3>
+    <h3>Data Pegawai</h3>
 
-	<a href="/pegawai" class="btn btn-primary"><- Kembali</a>
+    <a href="/pegawai"> Kembali</a>
 
-	<br/>
-	<br/>
-    <div class="container">
-        <div class="row">
-            <div class="col-4" ></div>
-            <div class="col-6">
-                <form action="/pegawai/store" method="post">
-                    {{ csrf_field() }}
-                    Nama <input class="border border-primary" type="text" name="nama" required="required"> <br/>
-                    Jabatan <input class="border border-primary" type="text" name="jabatan" required="required"> <br/>
-                    Umur <input class="border border-primary" type="number" name="umur" required="required"> <br/>
-                    Alamat <textarea class="border border-primary" name="alamat" required="required"></textarea> <br/>
-                    <input class="btn btn-warning" type="submit" value="OK">
-                </form>
-            </div>
+    <br />
+    <br />
+
+    <form action="/pegawai/store" method="post" class="form-horizontal col-5">
+        {{ csrf_field() }}
+        <div class="form-group row">
+            <label for="nama" class="col">Nama</label>
+            <input type="text" class="form-control col" placeholder="Masukkan Nama" name="nama">
         </div>
-    </div>
-</body>
-</html>
+        <div class="form-group row">
+            <label for="jabatan" class="col">Jabatan</label>
+            <input type="text" class="form-control col" placeholder="Masukkan Jabatan" name="jabatan">
+        </div>
+        <div class="form-group row">
+            <label for="umur" class="col">Umur</label>
+            <input type="number" class="form-control col" placeholder="Umur" name="umur">
+        </div>
+        <div class="form-group row">
+            <label for="alamat" class="col">Alamat</label>
+            <textarea class="form-control col" name="alamat" rows="3"></textarea>
+        </div>
+
+        <input type="submit" class="btn btn-primary" value="Simpan Data">
+
+    </form>
+
+
+@endsection

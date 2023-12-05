@@ -80,4 +80,9 @@ Route::get('/pegawai/view/{id}','App\Http\Controllers\PegawaiController@view');
 
 // nilai kuliah
 Route::get('kuliah','App\Http\Controllers\KuliahController@nilai');
+//tambah nilai kuliah
+Route::get('kuliah/tambah','App\Http\Controllers\KuliahController@tambah');
+Route::post('kuliah/store','App\Http\Controllers\KuliahController@store');
+
+
 
