@@ -77,9 +77,13 @@ Route::get('/pegawai/hapus/{id}','App\Http\Controllers\PegawaiController@hapus')
 //readonly
 Route::get('/pegawai/view/{id}','App\Http\Controllers\PegawaiController@view');
 
+//cari data
+Route::get('/pegawai/cari','App\Http\Controllers\PegawaiController@cari');
+
 
 // nilai kuliah
 Route::get('kuliah','App\Http\Controllers\KuliahController@nilai');
+
 //tambah nilai kuliah
 Route::get('kuliah/tambah','App\Http\Controllers\KuliahController@tambah');
 Route::post('kuliah/store','App\Http\Controllers\KuliahController@store');
