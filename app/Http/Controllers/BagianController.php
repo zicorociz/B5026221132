@@ -11,8 +11,7 @@ class BagianController extends Controller{
 	{
     	// mengambil data dari table nilaikuliah
 		// $nilaikuliah = DB::table('nilaikuliah')->get();
-        $bagian = DB::table('bagian')
-                    ->get();
+        $bagian = DB::table('bagian')->paginate(10);
 
     	// mengirim data nilaikuliah ke view index
 		return view('beranda',['bagian' => $bagian]);

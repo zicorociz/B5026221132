@@ -11,8 +11,7 @@ class KuliahController extends Controller
 	{
     	// mengambil data dari table nilaikuliah
 		// $nilaikuliah = DB::table('nilaikuliah')->get();
-        $nilaikuliah = DB::table('nilaikuliah')
-                    ->get();
+        $nilaikuliah = DB::table('nilaikuliah')->paginate(10);
 
     	// mengirim data nilaikuliah ke view index
 		return view('nilai',['nilaikuliah' => $nilaikuliah]);
