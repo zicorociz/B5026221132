@@ -39,5 +39,18 @@ class KuliahController extends Controller
 		return redirect('/kuliah');
 
 	}
+    public function cari(Request $request)
+	{
+		// menangkap data pencarian
+		$cari = $request->cari;
+
+    		// mengambil data dari table pegawai sesuai pencarian data
+		$nilaikuliah = DB::table('nilaikuliah')
+		->where('NRP','like',"%".$cari."%")->paginate();
+
+    		// mengirim data pegawai ke view index
+		return view('nilai',['nilaikuliah' => $nilaikuliah]);
+
+	}
 
 }

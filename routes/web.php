@@ -88,6 +88,8 @@ Route::get('kuliah','App\Http\Controllers\KuliahController@nilai');
 Route::get('kuliah/tambah','App\Http\Controllers\KuliahController@tambah');
 Route::post('kuliah/store','App\Http\Controllers\KuliahController@store');
 
+Route::get('/kuliah/cari','App\Http\Controllers\KuliahController@cari');
+
 
 //Route untuk Pra EAS
 Route::get('beranda', 'App\Http\Controllers\BagianController@beranda');

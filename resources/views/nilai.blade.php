@@ -9,9 +9,18 @@
 	<h2>Institut Teknologi Sepuluh Nopember</h2>
 	<h3>Data kuliah</h3>
 
+
+
 	<br/>
 	<br/>
     <a href="kuliah/tambah" class="btn btn-primary mb-3">+ Tambah Nilai Mahasiswa</a>
+    <br/>
+    <p>Cari Data Mahasiswa : berdasarkan nama</p>
+	<form action="/kuliah/cari" method="GET">
+
+		<input class="form-control" type="text" name="cari" placeholder="Cari Pegawai .." value="{{ old("cari", isset($cari) ? $cari : '') }}">
+		<input class="mt-1 mb-3 btn btn-primary" type="submit" value="CARI">
+	</form>
 
 	<table class="table table-striped">
 		<tr class="table-primary">
