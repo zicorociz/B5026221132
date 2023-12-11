@@ -96,4 +96,13 @@ Route::get('beranda', 'App\Http\Controllers\BagianController@beranda');
 Route::get('beranda/tambahNama','App\Http\Controllers\BagianController@tambahNama');
 Route::post('beranda/store','App\Http\Controllers\BagianController@store');
 
+//Route untuk EAS kode BB
+Route::get('mahasiswa', 'App\Http\Controllers\MahasiswaController@mindex');
+Route::get('mahasiswa/mtambah', 'App\Http\Controllers\MahasiswaController@tambah');
+Route::post('mahasiswa/store', 'App\Http\Controllers\MahasiswaController@store');
+Route::get('/mahasiswa/medit/{NRP}','App\Http\Controllers\MahasiswaController@edit');
+Route::post('/mahasiswa/update','App\Http\Controllers\MahasiswaController@update');
+Route::get('/mahasiswa/mview/{NRP}','App\Http\Controllers\MahasiswaController@view');
+
+
 

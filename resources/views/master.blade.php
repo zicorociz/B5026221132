@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css" integrity="sha384-nU14brUcp6StFntEOOEBvcJm4huWjB0OcIeQ3fltAfSmuZFrkAif0T+UtNGlKKQv" crossorigin="anonymous" />
     <title>@yield('title')</title>
 </head>
-<body>
+<body style="background-color: #9cd7fe">
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
         <!-- Brand -->
         <a class="navbar-brand" href="#"><img src="ets/Zico..png" alt=""></a>
@@ -23,13 +23,16 @@
           <li class="nav-item">
             <a class="nav-link" href="/beranda">Bagian</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/mahasiswa">Mahasiswa</a>
+          </li>
         </ul>
       </nav>
       <br>
       <div class="container">
         @yield('konten')
       </div>
-
+      <br>
       @include('footer')
 </body>
 </html>
